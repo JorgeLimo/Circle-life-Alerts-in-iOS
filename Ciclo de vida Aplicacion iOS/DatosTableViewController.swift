@@ -42,7 +42,9 @@ class DatosTableViewController: UITableViewController {
                 
             case 1:
                 
+                //INicializa el alert controller
                 alertController = UIAlertController(title: "Alerta", message: "Alerta con boton Ok", preferredStyle: UIAlertControllerStyle.alert)
+                //Fin de la inicializacion
                
                 let accion = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action) in
                     print("Presiono OK")
@@ -97,13 +99,64 @@ class DatosTableViewController: UITableViewController {
             case 0:
                 
                 
-                print("Simple")
+                alertController = UIAlertController(title: "accion Sheet", message: "accion sheet simple", preferredStyle: UIAlertControllerStyle.actionSheet)
+                
+                self.present(alertController, animated: true, completion: {
+                    print("Muestra el accion sheets Simple")
+                })
            
             
             case 1:
-                print("Con Acciones")
+                
+                
+                alertController = UIAlertController(title: "accion Sheet", message: "accion sheet con acciones", preferredStyle: UIAlertControllerStyle.actionSheet)
+       
+                
+                let accionAceptar = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (action) in
+                    print("Presiono aceptar")
+                })
+                
+                
+                let accionCncelar = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler: { (action) in
+                    print("preciono cancelar")
+                })
+                
+                alertController.addAction(accionAceptar)
+                alertController.addAction(accionCncelar)
+                
+                self.present(alertController, animated: true, completion: {
+                    print("Muestra el accion sheets con acciones")
+                })
+                
             default:
-                print("Con boton cancelar")
+                
+                
+                alertController = UIAlertController(title: "accion Sheet", message: "accion sheet con eliminar", preferredStyle: UIAlertControllerStyle.actionSheet)
+                
+                
+                let accionAceptar = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (action) in
+                    print("Presiono aceptar")
+                })
+                
+                
+                let accioneliminar = UIAlertAction(title: "Eliminar", style: UIAlertActionStyle.destructive, handler: { (action) in
+                    print("Presiono Eliminar")
+                })
+                
+                
+                let accionCncelar = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler: { (action) in
+                    print("preciono cancelar")
+                })
+                
+                alertController.addAction(accioneliminar)
+                alertController.addAction(accionAceptar)
+                alertController.addAction(accionCncelar)
+                
+                self.present(alertController, animated: true, completion: {
+                    print("Muestra el accion sheets con acciones")
+                })
+            
+            
             }
             
             
