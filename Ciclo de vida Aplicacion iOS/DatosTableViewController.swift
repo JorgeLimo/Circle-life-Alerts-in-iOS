@@ -101,10 +101,18 @@ class DatosTableViewController: UITableViewController {
                 
                 alertController = UIAlertController(title: "accion Sheet", message: "accion sheet simple", preferredStyle: UIAlertControllerStyle.actionSheet)
                 
+                //Validar para iPad
+                //la funcion cancelar no se muestra porque el popover se cancela dando
+                //click afuera del elemento
+                alertController.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
+                //Fin de validacion para iPad
+                
                 self.present(alertController, animated: true, completion: {
                     print("Muestra el accion sheets Simple")
                 })
            
+
+                
             
             case 1:
                 
@@ -123,6 +131,12 @@ class DatosTableViewController: UITableViewController {
                 
                 alertController.addAction(accionAceptar)
                 alertController.addAction(accionCncelar)
+                
+                //Validar para iPad
+                //la funcion cancelar no se muestra porque el popover se cancela dando
+                //click afuera del elemento
+                alertController.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
+                //Fin de validacion para iPad
                 
                 self.present(alertController, animated: true, completion: {
                     print("Muestra el accion sheets con acciones")
@@ -151,6 +165,12 @@ class DatosTableViewController: UITableViewController {
                 alertController.addAction(accioneliminar)
                 alertController.addAction(accionAceptar)
                 alertController.addAction(accionCncelar)
+                
+                //Validar para iPad
+                //la funcion cancelar no se muestra porque el popover se cancela dando
+                //click afuera del elemento, en caso de iphone no lo considera
+                alertController.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
+                //Fin de validacion para iPad
                 
                 self.present(alertController, animated: true, completion: {
                     print("Muestra el accion sheets con acciones")
