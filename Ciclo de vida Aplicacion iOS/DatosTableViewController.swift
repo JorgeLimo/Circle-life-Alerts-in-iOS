@@ -70,14 +70,36 @@ class DatosTableViewController: UITableViewController {
                     print("Presiono la alerta")
                 })
             default:
-                print("Con texto")
+                
+                alertController = UIAlertController(title: "Alerta", message: "Alerta con input", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alertController.addTextField(configurationHandler: { (textField) in
+                    textField.placeholder = "Ingrese texto"
+                })
+                
+                let accion = UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: { (action) in
+                    let texto = alertController.textFields?[0].text!
+                    print("El texto ingresado es : " + texto!)
+                    
+                })
+             
+                alertController.addAction(accion)
+                
+                self.present(alertController, animated: true, completion: {
+                })
+                
+                
             }
             
         }else{
             
             switch fila {
             case 0:
+                
+                
                 print("Simple")
+           
+            
             case 1:
                 print("Con Acciones")
             default:
