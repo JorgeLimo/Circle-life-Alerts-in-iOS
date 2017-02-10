@@ -12,6 +12,7 @@
 		FBC9A9151E4D3E050045BF72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC9A9131E4D3E050045BF72 /* Main.storyboard */; };
 		FBC9A9171E4D3E050045BF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC9A9161E4D3E050045BF72 /* Assets.xcassets */; };
 		FBC9A91A1E4D3E050045BF72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC9A9181E4D3E050045BF72 /* LaunchScreen.storyboard */; };
+		FBC9A9221E4D49580045BF72 /* DatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A9211E4D49580045BF72 /* DatosTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FBC9A9161E4D3E050045BF72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBC9A9191E4D3E050045BF72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBC9A91B1E4D3E050045BF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC9A9211E4D49580045BF72 /* DatosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FBC9A9161E4D3E050045BF72 /* Assets.xcassets */,
 				FBC9A9181E4D3E050045BF72 /* LaunchScreen.storyboard */,
 				FBC9A91B1E4D3E050045BF72 /* Info.plist */,
+				FBC9A9211E4D49580045BF72 /* DatosTableViewController.swift */,
 			);
 			path = "Ciclo de vida Aplicacion iOS";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				FBC9A9121E4D3E040045BF72 /* ViewController.swift in Sources */,
 				FBC9A9101E4D3E040045BF72 /* AppDelegate.swift in Sources */,
+				FBC9A9221E4D49580045BF72 /* DatosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
